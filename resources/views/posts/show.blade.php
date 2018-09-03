@@ -12,15 +12,21 @@
     <hr>
     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
     <hr>
-    @if(!Auth::guest())
-        @if(Auth::user()->id == $post->user_id)
-            <a href="../posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
+    <span class="btn-group">
+        @if(!Auth::guest())
+            @if(Auth::user()->id == $post->user_id)
+                <div>
+                    <a href="../posts/{{$post->id}}/edit" class="btn btn-secondary">Edit</a>
+                </div>
 
-            {!!Form::open(['action' => ['PostsController@destroy', $post->id, 'method' => 'POST', 'class' => 'pull-right']])!!}
-                {{Form::hidden('_method', 'DELETE')}}
-                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-            {!!Form::close()!!}
+                <div>
+                    {!!Form::open(['action' => ['PostsController@destroy', $post->id, 'method' => 'POST', 'class' => 'pull-right']])!!}
+                        {{Form::hidden('_method', 'DELETE')}}
+                        {{Form::submit('Delete', ['class' => 'btn btn-danger btnPostDelete'])}}
+                    {!!Form::close()!!}
+                </div>
+            @endif
         @endif
-    @endif
+    </span>
 @endsection
 </div>

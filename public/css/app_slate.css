@@ -9960,3 +9960,7 @@
   .list-group-item:hover {
     background-color: #1c1e22;
   }
+
+  input.btn.btn-danger.btnPostDelete {
+    float: right;
+  }
