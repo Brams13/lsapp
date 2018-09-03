@@ -7,7 +7,7 @@
     @if(count($posts) > 0)
         @foreach($posts as $post)
             <div class="well">
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col-md-4 col-sm-4">
                         <img style="width:100%" src="./storage/cover_images/{{$post->cover_image}}">
                     </div>
