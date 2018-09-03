@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+{{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel"> --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -10,23 +11,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item">
+                <a class="nav-link" href="/lsapp/public/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/lsapp/public/about">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/lsapp/public/services">Services</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/lsapp/public/posts">Blog</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="/lsapp/public/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/lsapp/public/about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/lsapp/public/services">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/lsapp/public/posts">Blog</a>
-                </li>            
-              </ul>
+                            
+            </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
